@@ -49,5 +49,8 @@ export 'presentation/provider/popular_movies_notifier.dart';
 export 'presentation/provider/top_rated_movies_notifier.dart';
 export 'presentation/provider/watchlist_movie_notifier.dart';
 
+// presentation -> bloc
+export 'presentation/bloc/search_movies_bloc/search_movies_bloc.dart';
+
 // presentation -> widgets
 export 'presentation/widgets/movie_card_list.dart';
