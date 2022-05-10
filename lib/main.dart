@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/movie.dart';
 import 'package:tv/tv.dart';
 import 'package:about/about.dart';
@@ -53,6 +54,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<WatchlistTvNotifier>(),
         ),
+        BlocProvider(
+          create: (_) => di.locator<SearchMoviesBloc>(),
+        )
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

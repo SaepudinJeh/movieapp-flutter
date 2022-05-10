@@ -6,6 +6,13 @@ import 'package:tv/tv.dart';
 final locator = GetIt.instance;
 
 void init() {
+  // bloc -> movie
+  locator.registerFactory(
+    () => SearchMoviesBloc(
+      locator(),
+    ),
+  );
+
   // provider
   // movie
   locator.registerFactory(
