@@ -1,6 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 import 'package:movie/movie.dart';
+import 'package:tv/presentation/bloc/search_tvs_bloc/search_tvs_bloc.dart';
 import 'package:tv/tv.dart';
 
 final locator = GetIt.instance;
@@ -9,6 +10,13 @@ void init() {
   // bloc -> movie
   locator.registerFactory(
     () => SearchMoviesBloc(
+      locator(),
+    ),
+  );
+
+  // bloc -> tv
+  locator.registerFactory(
+    () => SearchTvsBloc(
       locator(),
     ),
   );
