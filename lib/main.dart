@@ -58,6 +58,9 @@ class MyApp extends StatelessWidget {
           create: (_) => di.locator<SearchMoviesBloc>(),
         ),
         BlocProvider(
+          create: (_) => di.locator<NowPlayingMoviesBloc>(),
+        ),
+        BlocProvider(
           create: (_) => di.locator<SearchTvsBloc>(),
         ),
       ],

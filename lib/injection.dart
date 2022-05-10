@@ -13,6 +13,11 @@ void init() {
       locator(),
     ),
   );
+  locator.registerFactory(
+    () => NowPlayingMoviesBloc(
+      locator(),
+    ),
+  );
 
   // bloc -> tv
   locator.registerFactory(
