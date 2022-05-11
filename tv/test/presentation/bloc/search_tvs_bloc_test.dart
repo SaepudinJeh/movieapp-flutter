@@ -3,7 +3,6 @@ import 'package:core/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tv/presentation/bloc/search_tvs_bloc/search_tvs_bloc.dart';
 import 'package:tv/tv.dart';
 import 'package:dartz/dartz.dart';
 

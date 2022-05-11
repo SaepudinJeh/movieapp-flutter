@@ -1,9 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tv/presentation/bloc/search_tvs_bloc/search_tvs_bloc.dart';
 import 'package:tv/tv.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class SearchTvPage extends StatelessWidget {
   static const routeName = '/search_tv';
