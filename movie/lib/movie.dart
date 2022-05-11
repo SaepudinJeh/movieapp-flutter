@@ -54,7 +54,7 @@ export 'presentation/bloc/search_movies_bloc/search_movies_bloc.dart';
 export 'presentation/bloc/now_playing_movies_bloc/now_playing_movies_bloc.dart';
 export 'presentation/bloc/popular_movies_bloc/popular_movies_bloc.dart';
 export 'presentation/bloc/top_rated_movies_bloc/top_rated_movies_bloc.dart';
-export 'presentation/bloc/detail_movies_bloc/detail_movies_bloc.dart';
+export 'presentation/bloc/detail_movie_bloc/detail_movie_bloc.dart';
 export 'presentation/bloc/recommendation_movies_bloc/recommendation_movies_bloc.dart';
 export 'presentation/bloc/watchlist_movies_bloc/watchlist_movies_bloc.dart';
 
