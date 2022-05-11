@@ -28,7 +28,20 @@ void init() {
     ),
   );
   locator.registerFactory(
-    () => DetailMoviesBloc(
+    () => DetailMovieBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => RecommendationMoviesBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => WatchlistMoviesBloc(
+      locator(),
+      locator(),
+      locator(),
       locator(),
     ),
   );

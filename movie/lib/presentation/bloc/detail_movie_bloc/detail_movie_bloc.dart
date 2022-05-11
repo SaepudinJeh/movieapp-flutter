@@ -8,12 +8,8 @@ part 'detail_movie_state.dart';
 
 class DetailMovieBloc extends Bloc<DetailMovieEvent, DetailMovieState> {
   final GetMovieDetail _getMovieDetail;
-  final SaveWatchlist _saveWatchlist;
-  final RemoveWatchlist _removeWatchlist;
-  final GetWatchListStatus _getWatchListStatus;
 
-  DetailMovieBloc(this._getMovieDetail, this._saveWatchlist, this._removeWatchlist, this._getWatchListStatus)
-      : super(DetailMovieEmpty()) {
+  DetailMovieBloc(this._getMovieDetail) : super(DetailMovieEmpty()) {
     on<FetchDetailMovie>((event, emit) async {
       final id = event.id;
 
@@ -29,48 +25,5 @@ class DetailMovieBloc extends Bloc<DetailMovieEvent, DetailMovieState> {
         },
       );
     });
-
-    on<AddWatchListMovie>(
-      (event, emit) async {
-        final movieDetail = event.movieDetail;
-        final result = await _saveWatchlist.execute(movieDetail);
-
-        result.fold(
-          (failure) {
-            emit(WatchlistMessageFailure(failure.message));
-          },
-          (successMessage) {
-            emit(WatchlistMessageSuccess(successMessage));
-          },
-        );
-        add(LoadWatchlistStatus(movieDetail.id));
-      },
-    );
-
-    on<RemoveFromWatchListMovie>(
-      (event, emit) async {
-        final movieDetail = event.movieDetail;
-        final result = await _removeWatchlist.execute(movieDetail);
-
-        result.fold(
-          (failure) {
-            emit(WatchlistMessageFailure(failure.message));
-          },
-          (successMessage) {
-            emit(WatchlistMessageSuccess(successMessage));
-          },
-        );
-        add(LoadWatchlistStatus(movieDetail.id));
-      },
-    );
-
-    on<LoadWatchlistStatus>(
-      (event, emit) async {
-        final id = event.id;
-        final result = await _getWatchListStatus.execute(id);
-
-        emit(WatchlistStatus(result));
-      },
-    );
   }
 }

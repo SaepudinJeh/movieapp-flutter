@@ -16,30 +16,3 @@ class FetchDetailMovie extends DetailMovieEvent {
   @override
   List<Object?> get props => [id];
 }
-
-class AddWatchListMovie extends DetailMovieEvent {
-  final MovieDetail movieDetail;
-
-  const AddWatchListMovie(this.movieDetail);
-
-  @override
-  List<Object?> get props => [movieDetail];
-}
-
-class RemoveFromWatchListMovie extends DetailMovieEvent {
-  final MovieDetail movieDetail;
-
-  const RemoveFromWatchListMovie(this.movieDetail);
-
-  @override
-  List<Object?> get props => [movieDetail];
-}
-
-class LoadWatchlistStatus extends DetailMovieEvent {
-  final int id;
-
-  const LoadWatchlistStatus(this.id);
-
-  @override
-  List<Object?> get props => [id];
-}
