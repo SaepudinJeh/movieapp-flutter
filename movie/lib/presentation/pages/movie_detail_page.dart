@@ -117,7 +117,7 @@ class DetailContent extends StatelessWidget {
                                 return ElevatedButton(
                                   onPressed: () {
                                     if (state is WatchlistStatus) {
-                                      if (!(state.isAddedToWatchlist)) {
+                                      if (!state.isAddedToWatchlist) {
                                         context.read<WatchlistMoviesBloc>().add(AddWatchListMovie(movie));
                                       } else {
                                         context.read<WatchlistMoviesBloc>().add(RemoveFromWatchListMovie(movie));
@@ -128,9 +128,9 @@ class DetailContent extends StatelessWidget {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       if (state is WatchlistStatus)
-                                        if (state.isAddedToWatchlist == false)
+                                        if (!state.isAddedToWatchlist)
                                           Icon(Icons.add)
-                                        else if (state.isAddedToWatchlist == true)
+                                        else if (state.isAddedToWatchlist)
                                           Icon(Icons.check),
                                       Text('Watchlist'),
                                     ],
