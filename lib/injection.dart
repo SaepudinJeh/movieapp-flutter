@@ -27,6 +27,11 @@ void init() {
       locator(),
     ),
   );
+  locator.registerFactory(
+    () => DetailMoviesBloc(
+      locator(),
+    ),
+  );
 
   // bloc -> tv
   locator.registerFactory(

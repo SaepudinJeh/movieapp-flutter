@@ -54,6 +54,7 @@ export 'presentation/bloc/search_movies_bloc/search_movies_bloc.dart';
 export 'presentation/bloc/now_playing_movies_bloc/now_playing_movies_bloc.dart';
 export 'presentation/bloc/popular_movies_bloc/popular_movies_bloc.dart';
 export 'presentation/bloc/top_rated_movies_bloc/top_rated_movies_bloc.dart';
+export 'presentation/bloc/detail_movies_bloc/detail_movies_bloc.dart';
 
 // presentation -> widgets
 export 'presentation/widgets/movie_card_list.dart';
