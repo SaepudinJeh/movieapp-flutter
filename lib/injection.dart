@@ -1,4 +1,4 @@
-import 'package:http/http.dart' as http;
+import 'package:core/core.dart';
 import 'package:get_it/get_it.dart';
 import 'package:movie/movie.dart';
 import 'package:tv/tv.dart';
@@ -178,5 +178,5 @@ void init() {
   locator.registerLazySingleton<DatabaseMovieHelper>(() => DatabaseMovieHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => HttpSSLPinning.client);
 }
