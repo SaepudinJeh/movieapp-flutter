@@ -41,14 +41,6 @@ export 'presentation/pages/search_movies_page.dart';
 export 'presentation/pages/top_rated_movies_page.dart';
 export 'presentation/pages/watchlist_movies_page.dart';
 
-// presentation -> provider
-export 'presentation/provider/movie_detail_notifier.dart';
-export 'presentation/provider/movie_list_notifier.dart';
-export 'presentation/provider/movie_search_notifier.dart';
-export 'presentation/provider/popular_movies_notifier.dart';
-export 'presentation/provider/top_rated_movies_notifier.dart';
-export 'presentation/provider/watchlist_movie_notifier.dart';
-
 // presentation -> bloc
 export 'presentation/bloc/search_movies_bloc/search_movies_bloc.dart';
 export 'presentation/bloc/now_playing_movies_bloc/now_playing_movies_bloc.dart';
