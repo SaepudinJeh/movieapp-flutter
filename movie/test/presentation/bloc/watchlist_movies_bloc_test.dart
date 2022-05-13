@@ -9,7 +9,7 @@ import 'package:dartz/dartz.dart';
 import '../../dummy_data/dummy_objects.dart';
 import 'watchlist_movies_bloc_test.mocks.dart';
 
-@GenerateMocks([GetWatchlistMovies])
+@GenerateMocks([GetWatchlistMovies, SaveWatchlist, RemoveWatchlist, GetWatchListStatus])
 void main() {
   late WatchlistMoviesBloc watchlistMoviesBloc;
   late MockGetWatchlistMovies mockGetWatchlistMovies;
