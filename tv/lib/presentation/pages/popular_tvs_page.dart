@@ -1,7 +1,6 @@
-import 'package:core/core.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv/tv.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class PopularTvsPage extends StatefulWidget {
   static const routeName = '/popular_tv';
@@ -16,7 +15,7 @@ class _PopularTvsPageState extends State<PopularTvsPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => Provider.of<PopularTvsNotifier>(context, listen: false).fetchPopularTvs());
+    Future.microtask(() => context.read<PopularTvsBloc>().add(FetchPopularTvs()));
   }
 
   @override
@@ -27,24 +26,28 @@ class _PopularTvsPageState extends State<PopularTvsPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Consumer<PopularTvsNotifier>(
-          builder: (context, data, child) {
-            if (data.state == RequestState.Loading) {
+        child: BlocBuilder<PopularTvsBloc, PopularTvsState>(
+          builder: (context, state) {
+            if (state is PopularTvsLoading) {
               return Center(
                 child: CircularProgressIndicator(),
               );
-            } else if (data.state == RequestState.Loaded) {
+            } else if (state is PopularTvsHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final tv = data.tvs[index];
+                  final tv = state.result[index];
                   return TvCard(tv);
                 },
-                itemCount: data.tvs.length,
+                itemCount: state.result.length,
+              );
+            } else if (state is PopularTvsError) {
+              return Center(
+                key: Key('error_message'),
+                child: Text(state.message),
               );
             } else {
               return Center(
-                key: Key('error_message'),
-                child: Text(data.message),
+                child: Text('Failed'),
               );
             }
           },

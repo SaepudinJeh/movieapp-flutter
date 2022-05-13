@@ -52,6 +52,39 @@ void init() {
       locator(),
     ),
   );
+  locator.registerFactory(
+    () => OnTheAirTvsBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => PopularTvsBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => TopRatedTvsBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => DetailTvBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => RecommendationTvsBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => WatchlistTvsBloc(
+      locator(),
+      locator(),
+      locator(),
+      locator(),
+    ),
+  );
 
   // provider
   // movie

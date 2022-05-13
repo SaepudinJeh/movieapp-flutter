@@ -51,6 +51,12 @@ export 'presentation/provider/watchlist_tvs_notifier.dart';
 
 // presentation -> bloc
 export 'presentation/bloc/search_tvs_bloc/search_tvs_bloc.dart';
+export 'presentation/bloc/on_the_air_tvs_bloc/on_the_air_tvs_bloc.dart';
+export 'presentation/bloc/popular_tvs_bloc/popular_tvs_bloc.dart';
+export 'presentation/bloc/top_rated_tvs_bloc/top_rated_tvs_bloc.dart';
+export 'presentation/bloc/detail_tv_bloc/detail_tv_bloc.dart';
+export 'presentation/bloc/recommendation_tvs_bloc/recommendation_tvs_bloc.dart';
+export 'presentation/bloc/watchlist_tvs_bloc/watchlist_tvs_bloc.dart';
 
 // presentation -> widgets
 export 'presentation/widgets/tv_card_list.dart';

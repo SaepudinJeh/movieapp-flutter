@@ -22,15 +22,14 @@ class DatabaseTvHelper {
 
   Future<Database> _initDb() async {
     final path = await getDatabasesPath();
-    final databasePath = '$path/ditonton.db';
+    final databasePath = '$path/ditontontvs.db';
 
     var db = await openDatabase(databasePath, version: 1, onCreate: _onCreate);
     return db;
   }
 
   void _onCreate(Database db, int version) async {
-    await db.execute(
-        '''
+    await db.execute('''
       CREATE TABLE  $_tblWatchlistTv (
         id INTEGER PRIMARY KEY,
         name TEXT,

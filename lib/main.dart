@@ -80,6 +80,24 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => di.locator<SearchTvsBloc>(),
         ),
+        BlocProvider(
+          create: (_) => di.locator<OnTheAirTvsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<PopularTvsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TopRatedTvsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<DetailTvBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<RecommendationTvsBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<WatchlistTvsBloc>(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
