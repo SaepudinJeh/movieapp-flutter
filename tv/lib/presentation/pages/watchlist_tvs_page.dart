@@ -58,9 +58,7 @@ class _WatchlistTvsPageState extends State<WatchlistTvsPage> with RouteAware {
                 child: Text(state.message),
               );
             } else {
-              return Center(
-                child: Text('Failed'),
-              );
+              return Center();
             }
           },
         ),

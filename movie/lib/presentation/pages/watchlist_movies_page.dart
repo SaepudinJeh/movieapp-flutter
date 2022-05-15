@@ -58,9 +58,7 @@ class _WatchlistMoviesPageState extends State<WatchlistMoviesPage> with RouteAwa
                 child: Text(state.message),
               );
             } else {
-              return Center(
-                child: Text('Failed'),
-              );
+              return const Center();
             }
           },
         ),

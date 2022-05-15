@@ -46,9 +46,7 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
                 child: Text(state.message),
               );
             } else {
-              return Center(
-                child: Text('Failed'),
-              );
+              return const Center();
             }
           },
         ),

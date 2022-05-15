@@ -37,7 +37,7 @@ class WatchlistTvsBloc extends Bloc<WatchlistTvsEvent, WatchlistTvsState> {
           emit(WatchlistTvsMessageFailure(failure.message));
         },
         (successMessage) {
-          emit(WatchlistTvsMessageSuccess('Added From Watchlist'));
+          emit(WatchlistTvsMessageSuccess('Added To Watchlist'));
         },
       );
       add(LoadWatchlistStatusTv(tvDetail.id));

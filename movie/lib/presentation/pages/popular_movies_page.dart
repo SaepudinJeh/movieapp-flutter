@@ -46,9 +46,7 @@ class _PopularMoviesPageState extends State<PopularMoviesPage> {
                 child: Text(state.message),
               );
             } else {
-              return Center(
-                child: Text('Failed'),
-              );
+              return const Center();
             }
           },
         ),

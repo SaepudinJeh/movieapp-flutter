@@ -46,9 +46,7 @@ class _PopularTvsPageState extends State<PopularTvsPage> {
                 child: Text(state.message),
               );
             } else {
-              return Center(
-                child: Text('Failed'),
-              );
+              return const Center();
             }
           },
         ),
