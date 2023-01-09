@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 backgroundImage: AssetImage('assets/circle-g.png'),
               ),
               accountName: Text('Movies'),
-              accountEmail: Text('movies@dicoding.com'),
+              accountEmail: Text('movies@email.com'),
             ),
             ListTile(
               leading: Icon(Icons.movie),
