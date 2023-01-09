@@ -21,3 +21,4 @@ export 'utils/utils.dart';
 export 'utils/constant.dart';
 export 'utils/http_ssl_pinning.dart';
 export 'utils/shared.dart';
+export 'utils/myHttpOverrides.dart';

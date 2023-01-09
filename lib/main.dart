@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:ditonton/injection.dart' as di;
 
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await HttpSSLPinning.init();

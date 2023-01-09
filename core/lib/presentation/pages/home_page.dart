@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/circle-g.png'),
               ),
-              accountName: Text('Ditonton'),
-              accountEmail: Text('ditonton@dicoding.com'),
+              accountName: Text('Movies'),
+              accountEmail: Text('movies@dicoding.com'),
             ),
             ListTile(
               leading: Icon(Icons.movie),
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.live_tv),
-              title: Text('Tv Series'),
+              title: Text('TV Series'),
               onTap: () {
                 Navigator.pushNamed(context, HomeTvPage.routeName);
               },
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.save_alt),
-              title: Text('Watchlist Tv Series'),
+              title: Text('Watchlist TV Series'),
               onTap: () {
                 Navigator.pushNamed(context, WatchlistTvsPage.routeName);
               },
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       appBar: AppBar(
-        title: Text('Ditonton'),
+        title: Text('Movies'),
         actions: [
           DropdownButtonHideUnderline(
             child: Padding(
@@ -188,7 +188,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
-                  'On The Air Tv Series',
+                  'On The Air TV Series',
                   style: kHeading6,
                 ),
               ),
@@ -210,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               _buildSubHeading(
-                title: 'Popular Tv Series',
+                title: 'Popular TV Series',
                 onTap: () => Navigator.pushNamed(context, PopularTvsPage.routeName),
               ),
               BlocBuilder<PopularTvsBloc, PopularTvsState>(
@@ -231,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               _buildSubHeading(
-                title: 'Top Rated Tv Series',
+                title: 'Top Rated TV Series',
                 onTap: () => Navigator.pushNamed(context, TopRatedTvsPage.routeName),
               ),
               BlocBuilder<TopRatedTvsBloc, TopRatedTvsState>(
